@@ -1,0 +1,220 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FA1C7A19-78EC-82E9-A4E9-D875754B7A11" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="TECNICOS">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>TECNICOS</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TECNICO" id="E8C8E10F-D36E-C5C3-5EFD-538781948781">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>ID_TECNICO</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="6310E087-EEB9-0A9C-6811-AC58B90E1AB1">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>NOMBRE</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="APELLIDO" id="DE6D3948-2AAD-F86C-1AD5-3BCD8FA9F135">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>APELLIDO</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDENTIFICACION" id="2FE4CC99-DE47-67AA-B214-079BC7A449EE">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>IDENTIFICACION</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,20,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="05AC7456-C295-113D-697A-8FE61E585EA9">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONO" id="6E19EFBE-6711-4819-6B59-FCE16A48F9AA">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>TELEFONO</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIRECCION" id="E7055E16-F944-8926-48C0-E6EF529866BE">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>DIRECCION</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CUADRILLA" id="02B1D05B-53C7-7D2D-E6C8-DE192E288229">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>ID_CUADRILLA</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F775BC73-6460-B978-8B4A-8EC605D58272" referredColumn="AB61442C-D7BD-A274-AA77-28CF9E87D92D"/>
+</associations>
+</Column>
+<Column name="BORRADO" id="810EC5F8-6A1E-93B8-069A-90889A165C54">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TECNICOS</sourceObjSchema>
+<sourceObjName>BORRADO</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B6B28594-D638-1538-61EA-ED75A8DABAFD" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="TECNICOS_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>SYS_C0018121</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:19 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8C8E10F-D36E-C5C3-5EFD-538781948781"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2F4FE9C6-9564-B43D-7EF5-37AEAD9FCEBE" name="IDX_TECNICOS_01">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>IDX_TECNICOS_01</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:20 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2FE4CC99-DE47-67AA-B214-079BC7A449EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="552AA5A6-0012-C427-8384-1D39E1D24372" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="IDX_TECNICOS_01">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>IDX_TECNICOS_01</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:19 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2FE4CC99-DE47-67AA-B214-079BC7A449EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="50215043-AE0D-0EB9-7BF5-735626ABC19D" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="TECNICOS_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>TECNICOS_PK</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 21:20:01 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<importedID>8A0E0B90-5A37-3464-BCC1-011684320A0E</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8C8E10F-D36E-C5C3-5EFD-538781948781"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="113608F3-8233-6EFE-BD37-41E6C850F1C9" name="FK_TECNICO_CUADRILLA_01">
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02B1D05B-53C7-7D2D-E6C8-DE192E288229"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

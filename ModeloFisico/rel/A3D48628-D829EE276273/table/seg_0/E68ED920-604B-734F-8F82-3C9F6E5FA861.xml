@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E68ED920-604B-734F-8F82-3C9F6E5FA861" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="TIPOS_INCIDENCIA_TECNICOS">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>TIPOS_INCIDENCIA_TECNICOS</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TECNICO" id="4598D454-8D31-8111-87D5-062EF1A6FAED">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TIPOS_INCIDENCIA_TECNICOS</sourceObjSchema>
+<sourceObjName>ID_TECNICO</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9C89FFF3-2DD7-3528-BD37-9C329B032E69" referredColumn="E8C8E10F-D36E-C5C3-5EFD-538781948781"/>
+</associations>
+</Column>
+<Column name="ID_TIPO_INCIDENCIA" id="9D841BC7-A1B5-8BCA-9B0C-B77245B11F80">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>TIPOS_INCIDENCIA_TECNICOS</sourceObjSchema>
+<sourceObjName>ID_TIPO_INCIDENCIA</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76D86E42-8683-9367-4BFC-BBB44E7D9AD6" referredColumn="1049085B-009A-5C6C-3395-2362ABEC84C0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C7F259D1-3572-E7F6-2B6D-8D3F8D93B0E1" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="TIPOS_INCIDENCIA_TECNICOS_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>SYS_C0018129</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:19 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4598D454-8D31-8111-87D5-062EF1A6FAED"/>
+<colUsage columnID="9D841BC7-A1B5-8BCA-9B0C-B77245B11F80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D99C3BD-2772-C464-0178-4927F4E38719" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="TIPOS_INCIDENCIA_TECNICOS_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>TIPOS_INCIDENCIA_TECNICOS_PK</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 21:20:01 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<importedID>97DC35BD-F5E0-259C-68BA-499CEF671743</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4598D454-8D31-8111-87D5-062EF1A6FAED"/>
+<colUsage columnID="9D841BC7-A1B5-8BCA-9B0C-B77245B11F80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43CCEA10-34D8-879F-2BDB-65A88CE1E72B" name="FK_TIPOS_INCIDENCIA_TECNICOS_02">
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4598D454-8D31-8111-87D5-062EF1A6FAED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72D690F8-85D0-6F21-4970-5DAFDF632C32" name="FK_TIPOS_INCIDENCIA_TECNICOS_01">
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D841BC7-A1B5-8BCA-9B0C-B77245B11F80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

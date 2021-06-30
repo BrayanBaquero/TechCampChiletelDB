@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5EE6C6CE-9D2D-3B9F-CEAE-82F3167BB797" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="USUARIOS_ROLES">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>USUARIOS_ROLES</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_USUARIO" id="6DA91776-81BF-B7DB-87A9-BF1C6ED4AF38">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>USUARIOS_ROLES</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59DF9155-DD7B-8069-FD12-55FC29C9511F" referredColumn="2462FEA9-1F89-E3EC-B8E3-90B056E8A27A"/>
+</associations>
+</Column>
+<Column name="ID_ROL" id="901AE687-355B-9508-0B3A-31B35420395C">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>USUARIOS_ROLES</sourceObjSchema>
+<sourceObjName>ID_ROL</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2794A333-A4B7-A88E-FB2E-3F90E04C6CFA" referredColumn="F6E1227B-40C3-5C48-BF05-CFA80CD0BF33"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AEA32102-DBF7-75E5-63D4-7E7D4D53A153" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="USUARIOS_ROLES_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>SYS_C0018134</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:19 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DA91776-81BF-B7DB-87A9-BF1C6ED4AF38"/>
+<colUsage columnID="901AE687-355B-9508-0B3A-31B35420395C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8CB4FF35-43BB-4A9A-9A91-F73DEFC4332D" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="USUARIOS_ROLES_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>USUARIOS_ROLES_PK</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 21:20:01 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<importedID>F402FF53-3248-B6FF-6E50-03ED819E826B</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DA91776-81BF-B7DB-87A9-BF1C6ED4AF38"/>
+<colUsage columnID="901AE687-355B-9508-0B3A-31B35420395C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F8AFF83-ABBB-A692-93D5-FAC98F65DC6D" name="FK_USUARIOS_ROLES_ROLES_02">
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="901AE687-355B-9508-0B3A-31B35420395C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="10C9DC10-C318-0F72-FCBC-C5C299F54FB8" name="FK_USUARIOS_ROLES_USUARIOS_01">
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DA91776-81BF-B7DB-87A9-BF1C6ED4AF38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

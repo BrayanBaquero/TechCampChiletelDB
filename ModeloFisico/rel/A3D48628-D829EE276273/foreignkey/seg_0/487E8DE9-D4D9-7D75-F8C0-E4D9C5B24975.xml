@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="487E8DE9-D4D9-7D75-F8C0-E4D9C5B24975" containerWithKeyObject="FFABAF05-AB2F-6125-C3FB-4B743C6F9232" localFKIndex="E022FC57-CBF8-474E-4238-508676BD9E69" name="FK_AGENDAS_ORDENES_ATENCION_01">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>FK_AGENDAS_ORDENES_ATENCION_01</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<referredTableLongName>CHILETEL.ORDENES_ATENCION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>390C2EA9-1B81-1134-8915-D69EEA2C8289</referredTableID>
+<keyObject>FD30D168-7854-BFAD-50BE-34BAFD80B4D0</keyObject>
+<referredKeyID>FD30D168-7854-BFAD-50BE-34BAFD80B4D0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ORDEN_ATENCION</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

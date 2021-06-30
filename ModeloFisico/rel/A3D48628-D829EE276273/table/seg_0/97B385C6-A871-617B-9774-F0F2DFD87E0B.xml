@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="97B385C6-A871-617B-9774-F0F2DFD87E0B" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="ZONAS">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>ZONAS</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOMBRE" id="B17CF707-A5E8-C7F5-4D0C-D4F533EBDA1F">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>ZONAS</sourceObjSchema>
+<sourceObjName>NOMBRE</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ZONA" id="23F019F2-EFF4-CECA-5969-BB3A3B3570C5">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>ZONAS</sourceObjSchema>
+<sourceObjName>ID_ZONA</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:18 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="625CA98C-9D89-EDC1-DDEA-F555A8BFBE56" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="ZONAS_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>SYS_C0018136</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:19 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23F019F2-EFF4-CECA-5969-BB3A3B3570C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34D7882D-D4B5-E86D-E927-B5416583E413" name="IDX_ZONAS_01">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>IDX_ZONAS_01</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:20 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B17CF707-A5E8-C7F5-4D0C-D4F533EBDA1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="761CF3DB-3959-1589-6478-EA983626BCF0" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="IDX_ZONAS_01">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>IDX_ZONAS_01</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:19 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B17CF707-A5E8-C7F5-4D0C-D4F533EBDA1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04F32076-188C-FD44-D3DE-B62AEAC27034" schemaObject="8341D96D-B509-53FF-A7CA-B7B4A32C0382" name="ZONAS_PK">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>ZONAS_PK</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 21:20:01 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<importedID>24905FDD-158F-F601-16FA-E531427CC83E</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23F019F2-EFF4-CECA-5969-BB3A3B3570C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

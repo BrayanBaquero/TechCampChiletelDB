@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2794A333-A4B7-A88E-FB2E-3F90E04C6CFA" containerWithKeyObject="5EE6C6CE-9D2D-3B9F-CEAE-82F3167BB797" localFKIndex="3F8AFF83-ABBB-A692-93D5-FAC98F65DC6D" name="FK_USUARIOS_ROLES_ROLES_02">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>FK_USUARIOS_ROLES_ROLES_02</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<referredTableLongName>CHILETEL.ROLES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>686274A5-5B23-B224-C485-9CB6C6A688B9</referredTableID>
+<keyObject>5781F5D8-9952-0AAA-F5C6-8C64ACE66F0C</keyObject>
+<referredKeyID>5781F5D8-9952-0AAA-F5C6-8C64ACE66F0C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ROLE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

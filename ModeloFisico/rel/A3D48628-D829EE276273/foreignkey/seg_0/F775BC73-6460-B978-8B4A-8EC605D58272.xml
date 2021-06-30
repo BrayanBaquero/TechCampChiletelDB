@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F775BC73-6460-B978-8B4A-8EC605D58272" containerWithKeyObject="FA1C7A19-78EC-82E9-A4E9-D875754B7A11" localFKIndex="113608F3-8233-6EFE-BD37-41E6C850F1C9" name="FK_TECNICO_CUADRILLA_01">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>FK_TECNICO_CUADRILLA_01</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<referredTableLongName>CHILETEL.CUADRILLAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1C2845D9-53C2-A972-ADFF-79BA5FDA655E</referredTableID>
+<keyObject>CC8AD588-EC6D-154A-10CB-72A2E4B99083</keyObject>
+<referredKeyID>CC8AD588-EC6D-154A-10CB-72A2E4B99083</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CUADRILLA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

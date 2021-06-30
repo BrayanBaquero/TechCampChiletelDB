@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9C89FFF3-2DD7-3528-BD37-9C329B032E69" containerWithKeyObject="E68ED920-604B-734F-8F82-3C9F6E5FA861" localFKIndex="43CCEA10-34D8-879F-2BDB-65A88CE1E72B" name="FK_TIPOS_INCIDENCIA_TECNICOS_02">
+<sourceConnName>CHILETEL</sourceConnName>
+<sourceObjSchema>CHILETEL</sourceObjSchema>
+<sourceObjName>FK_TIPOS_INCIDENCIA_TECNICOS_TECNICOS_02</sourceObjName>
+<createdBy>1015453029</createdBy>
+<createdTime>2021-06-20 19:30:22 UTC</createdTime>
+<ownerDesignName>ModeloFisico</ownerDesignName>
+<referredTableLongName>CHILETEL.TECNICOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FA1C7A19-78EC-82E9-A4E9-D875754B7A11</referredTableID>
+<keyObject>B6B28594-D638-1538-61EA-ED75A8DABAFD</keyObject>
+<referredKeyID>B6B28594-D638-1538-61EA-ED75A8DABAFD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TECNICO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
