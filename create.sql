@@ -145,7 +145,7 @@ CREATE TABLE incidencias (
     id_cliente          NUMBER(10) NOT NULL,
     id_tipo_incidencia  NUMBER(10) NOT NULL,
     descripcion         VARCHAR2(150 CHAR),
-    fecha_registro      DATE NOT NULL 
+    fecha_registro      TIMESTAMP(0) NOT NULL 
 );
 
 CREATE UNIQUE INDEX idx_incidencias_01 ON
@@ -233,7 +233,7 @@ CREATE TABLE tipos_incidencia (
 );
 
 ALTER TABLE tipos_incidencia
-    ADD CONSTRAINT tipos_incidencia_pk PRIMARY KEY ( id_tipos_incidencia );
+    ADD CONSTRAINT tipos_incidencia_pk PRIMARY KEY ( id_tipo_incidencia );
 ALTER TABLE tipos_incidencia
   add constraint UK_tipos_incidencia_01
   unique (prioridad);
@@ -323,7 +323,7 @@ ALTER TABLE incidencias
 
 ALTER TABLE incidencias
     ADD CONSTRAINT fk_incidencias_tipos_incidencia_02 FOREIGN KEY ( id_tipo_incidencia )
-        REFERENCES tipos_incidencia ( id_tipos_incidencia )
+        REFERENCES tipos_incidencia ( id_tipo_incidencia )
     NOT DEFERRABLE;
 
 ALTER TABLE ordenes_atencion
@@ -338,7 +338,7 @@ ALTER TABLE tecnicos
 
 ALTER TABLE tipos_incidencia_tecnicos
     ADD CONSTRAINT fk_tipos_incidencia_tecnicos_01 FOREIGN KEY ( id_tipo_incidencia )
-        REFERENCES tipos_incidencia ( id_tipos_incidencia )
+        REFERENCES tipos_incidencia ( id_tipo_incidencia )
     NOT DEFERRABLE;
 
 ALTER TABLE tipos_incidencia_tecnicos
