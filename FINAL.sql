@@ -191,3 +191,17 @@ select tec.id_tecnico, coalesce(sum(ag.t_atencion),0) ag from agendas ag right j
                 AND TO_CHAR(ag.FECHA,'D')<=TO_CHAR(6)
             group by tec.id_tecnico
             order by ag asc;
+            
+            
+            
+-----OBTENER DETALLES DE EVENTO EN AGENDA PARA VER EN CALENDARIO
+select  coalesce(ag.id_orden_atencion,0) as ord_id,ag.h_inicio as inicio,ag.h_final as final,cl.nombre as nombreCliente,cl.apellido as apellidoCliente,cl.identificacion,cl.direccion as Direccion,ti.nombre TipoIncidencia from tecnicos tc 
+    inner join agendas ag on (tc.id_tecnico=ag.id_tecnico)
+			and ag.fecha>=to_date('2021-07-12','YYYY-MM-DD') 
+            and ag.fecha<=to_date('2021-07-19','YYYY-MM-DD') and tc.borrado=0
+    inner join ordenes_atencion ort on (ort.id_orden_atencion=ag.id_orden_atencion)
+    inner join incidencias i on(i.id_incidencia=ort.id_incidencia)
+    inner join clientes cl on(cl.id_cliente=i.id_cliente)
+    inner join tipos_incidencia ti on (i.id_tipo_incidencia=ti.id_tipo_incidencia)
+    where tc.identificacion=6805884594
+			order by ag.h_final asc;

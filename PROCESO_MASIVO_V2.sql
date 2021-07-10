@@ -33,7 +33,7 @@ select buscar_tecnicos(1,1,2,6) from dual;
 --------------------------AGENDAR---------------------------------------
 
 create or replace 
-FUNCTION GENaGENDA(id_orden NUMBER,id_tec NUMBER,t_aten number,dia_inicio date, dia_fin date)
+FUNCTION AGENDAR(id_orden NUMBER,id_tec NUMBER,t_aten number,dia_inicio date, dia_fin date)
 RETURN NUMBER
 IS
     PRAGMA autonomous_transaction;
@@ -54,7 +54,7 @@ BEGIN
         end if;
             
         if((8-suma)>=t_aten and suma>0) then
-            select h_final into h_agenda_ult from agendas where id_tecnico=id_tec and to_char(fecha,'D')=to_char(cnt) order by fecha desc fetch first 1 row only;
+            select h_final into h_agenda_ult from agendas where id_tecnico=id_tec and to_char(fecha,'D')=to_char(cnt) order by h_final desc fetch first 1 row only;
             fecha_insertar:=trunc(h_agenda_ult);
             hi_insertar:=h_agenda_ult;
             hf_insertar:=hi_insertar+(t_aten/24);
@@ -110,7 +110,7 @@ DECLARE
     tecnico tec_agenda;--Almacenar tecnico diponibles para atender orden organizados por tiempo agendado
     agenda number(1);--Falg indicado de agendamiento exitos de orden
     
-    dia_actual date:=to_date('2021-07-3','YYYY-MM-DD');
+    dia_actual date:=to_date('2021-06-29','YYYY-MM-DD');
     inicio_semana number:=2; --Lunes
     fin_semana number:=6; --Viernes
     dia_inicio date;  --Dia desde el cual se empieza a agendar  
@@ -140,11 +140,84 @@ BEGIN
             dbms_output.put_line('inicio:' || dia_inicio || ' dia fin: ' || dia_fin || 'resta: ' ||to_char(to_number(to_char(dia_fin,'D'))-to_number(to_char(dia_inicio,'D'))));
             h_semanales_d:=((to_number(to_char(dia_fin,'D'))-to_number(to_char(dia_inicio,'D')))+1)*8;
             if((h_semanales_d-tecnico.horas_semanales)>=orden.tiempo_atencion)then
-                agenda:=genagenda(orden.id_orden_atencion,tecnico.id_tecnico,orden.tiempo_atencion,dia_inicio,dia_fin);
+                agenda:=AGENDAR(orden.id_orden_atencion,tecnico.id_tecnico,orden.tiempo_atencion,dia_inicio,dia_fin);
                 exit when agenda=1;
             end if;
          end loop;
        agenda:=0;--inicializar indicador de estado de agendamiento
    end loop;--Fin loop ordenes
 END;
+     
+     
+     
+     
+     
+----------------------------PROCEDIMIENTO ALMACENADO--------------------------------
+CREATE OR REPLACE PROCEDURE PA_AGENDAR_ORDENES(estado OUT integer)
+is
+ref_cursor SYS_REFCURSOR;
+    ref_cursor_tecnicos SYS_REFCURSOR;
+    TYPE ordenes IS RECORD(
+        id_orden_atencion number,
+        TIEMPO_ATENCION number,
+        CLIENTE number,
+        P_TDAÑO number,
+        P_TCLIENTE number,
+        ID_ZONA number,
+        FECHA_REGISTRO timestamp
+    );
+    
+    TYPE tec_agenda IS RECORD(
+        id_tecnico number,
+        horas_semanales number
+    );
+    orden ordenes; --Ordenes de atencion organizadas por prioridad
+    tecnico tec_agenda;--Almacenar tecnico diponibles para atender orden organizados por tiempo agendado
+    agenda number(1);--Falg indicado de agendamiento exitos de orden
+    
+    dia_actual date;--:=to_date('2021-06-28','YYYY-MM-DD');
+    inicio_semana number:=2; --Lunes
+    fin_semana number:=6; --Viernes
+    dia_inicio date;  --Dia desde el cual se empieza a agendar  
+    dia_fin date;
+    h_semanales_d number;--calculo de horas semanales disponibles por tecnico 
+begin
+ dia_actual:=sysdate;
+ if(to_char(dia_actual,'D')>=inicio_semana and to_char(dia_actual,'D')<fin_semana)then
+        dia_inicio:=dia_actual+1;
+        dia_fin:=next_day(dia_actual,'VIERNES');
+    else
+        dia_inicio:=next_day(dia_actual,'LUNES');
+        dia_fin:=next_day(dia_inicio,'VIERNES');
+    end if;
+
+    ref_cursor:=ORDENES_ORGANIZADAS;---Obtener ordenes de atencion organizadas por prioridad
+    loop
+        FETCH ref_cursor INTO orden;
+        EXIT WHEN ref_cursor%NOTFOUND;
+        --DBMS_OUTPUT.PUT_LINE(orden.CLIENTE || '| ' || orden.P_TDAÑO || '| ' || orden.P_TCLIENTE || '| ' || orden.ID_ZONA || '| ' || orden.FECHA_REGISTRO);
+        DBMS_OUTPUT.PUT_LINE('Orden  ==> Cliente:' || orden.CLIENTE);
+       ref_cursor_tecnicos:=BUSCAR_TECNICOS(orden.P_TDAÑO,orden.ID_ZONA,dia_inicio,dia_fin);---Obtener tecnicos que pueden atender cada orden de atencion zona||tipo incidencia
+       loop
+            FETCH ref_cursor_tecnicos into tecnico;
+            EXIT WHEN ref_cursor_tecnicos%NOTFOUND;
+            dbms_output.put_line('-Id tecnico: ' || tecnico.id_tecnico || ' | tAgendado: ' || tecnico.horas_semanales);
+            dbms_output.put_line('inicio:' || dia_inicio || ' dia fin: ' || dia_fin || 'resta: ' ||to_char(to_number(to_char(dia_fin,'D'))-to_number(to_char(dia_inicio,'D'))));
+            h_semanales_d:=((to_number(to_char(dia_fin,'D'))-to_number(to_char(dia_inicio,'D')))+1)*8;
+            if((h_semanales_d-tecnico.horas_semanales)>=orden.tiempo_atencion)then
+                agenda:=AGENDAR(orden.id_orden_atencion,tecnico.id_tecnico,orden.tiempo_atencion,dia_inicio,dia_fin);
+                exit when agenda=1;
+            end if;
+         end loop;
+       agenda:=0;--inicializar indicador de estado de agendamiento
+   end loop;--Fin loop ordenes
+   --raise_application_error(-20001,'Error de prueba');
+   estado:=1;
+exception
+    when others then
+     dbms_output.put_line('');
+     --estado:=0;
+     raise_application_error(-20001,sqlerrm);
+end;
+/
      

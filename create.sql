@@ -80,7 +80,7 @@ CREATE SEQUENCE ROLES_SEQ
 CREATE TABLE agendas (
     id_agenda          NUMBER(10) DEFAULT AGENDAS_SEQ.NEXTVAL NOT NULL,
     id_orden_atencion  NUMBER(10) NOT NULL,
-    id_tecnico         NUMBER(10),
+    id_tecnico         NUMBER(10) NOT NULL,
     t_atencion         NUMBER(2),
     h_inicio           TIMESTAMP(0),
     h_final            TIMESTAMP(0),
@@ -304,6 +304,10 @@ ALTER TABLE zonas_cuadrillas
 ALTER TABLE agendas
     ADD CONSTRAINT fk_agendas_ordenes_atencion_01 FOREIGN KEY ( id_orden_atencion )
         REFERENCES ordenes_atencion ( id_orden_atencion )
+    NOT DEFERRABLE;
+ALTER TABLE agendas
+    ADD CONSTRAINT fk_tecnicos_02 FOREIGN KEY ( id_tecnico )
+        REFERENCES tecnicos ( id_tecnico )
     NOT DEFERRABLE;
 
 ALTER TABLE clientes
