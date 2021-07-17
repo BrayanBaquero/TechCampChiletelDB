@@ -1,0 +1,7 @@
+insert into ORDENES_ATENCION
+ select 
+ ORDENES_ATENCION_seq.nextval,
+ ROWNUM,
+ 0
+ FROM DUAL
+ CONNECT BY LEVEL <=1000;
