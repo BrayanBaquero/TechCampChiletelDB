@@ -1,7 +1,6 @@
-insert into ORDENES_ATENCION
+insert into ORDENES_ATENCION 
  select 
- ORDENES_ATENCION_seq.nextval,
- ROWNUM,
- 0
- FROM DUAL
- CONNECT BY LEVEL <=1000;
+ nextval('ORDENES_ATENCION_seq'),
+ 0,
+ s
+ FROM generate_series(1,1000) s;

@@ -1,25 +1,25 @@
 -------CREACION TABLAS Y SECUENCIAS-----
-@ESTRUCTURA/CREACION_TABLAS_SECUENCIAS.sql
+--\i ESTRUCTURA/CREACION_TABLAS_SECUENCIAS.sql
 
 ------PAQUETE -PROCEDIMIENTOS Y FUNCIONES-------
-@ESTRUCTURA/Paquete.sql
+\i ESTRUCTURA/Paquete.sql
 
 -----------AUTENTICACION---------------
-@DATOS/v0/AUTH.sql
+\i DATOS/v0/AUTH.sql
 
 ---------------ZONAS-------------------
-@DATOS/v0/ZONAS.sql
+\i DATOS/v0/ZONAS.sql
 
 ----------TIPOS DE CLIENTE----------
-@DATOS/v0/TIPOS_CLIENTE.sql
+\i DATOS/v0/TIPOS_CLIENTE.sql
 
 --------TIPOS DE INCIDENCIA--------------
-@DATOS/v0/TIPOS_INCIDENCIA
+\i DATOS/v0/TIPOS_INCIDENCIA.sql
 
 --------------CLIENTES-------------------
-@DATOS/v0/CLIENTES.sql;
+\i DATOS/v0/CLIENTES.sql;
 
-commit;
+--commit;
 
 
 

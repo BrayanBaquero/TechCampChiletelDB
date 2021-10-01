@@ -1,42 +1,42 @@
 -------CREACION TABLAS Y SECUENCIAS-----
-@ESTRUCTURA/CREACION_TABLAS_SECUENCIAS.sql
+--\i ESTRUCTURA/CREACION_TABLAS_SECUENCIAS.sql
 
 ------PAQUETE -PROCEDIMIENTOS Y FUNCIONES-------
-@ESTRUCTURA/Paquete.sql
+\i ESTRUCTURA/Paquete.sql
 
 -----------AUTENTICACION---------------
-@DATOS/v2/AUTH.sql
+\i DATOS/v2/AUTH.sql
 
 ---------------ZONAS-------------------
-@DATOS/v2/ZONAS.sql
+\i DATOS/v2/ZONAS.sql
 
 ----------TIPOS DE CLIENTE----------
-@DATOS/v2/TIPOS_CLIENTE.sql
+\i DATOS/v2/TIPOS_CLIENTE.sql
 
 --------TIPOS DE INCIDENCIA--------------
-@DATOS/v2/TIPOS_INCIDENCIA
+\i DATOS/v2/TIPOS_INCIDENCIA.sql
 
 --------------CLIENTES-------------------
-@DATOS/v2/CLIENTES.sql;
+\i DATOS/v2/CLIENTES.sql
 
 -------------CUADRILLAS------------------
-@DATOS/v2/CUADRILLAS.sql
+\i DATOS/v2/CUADRILLAS.sql
 
 --------------TECNICOS-------------------
-@DATOS/v2/TECNICOS.sql
+\i DATOS/v2/TECNICOS.sql
 
 ----------ZONAS CUADRILLAS---------------
-@DATOS/v2/ZONAS_CUADRILLAS.sql
+\i DATOS/v2/ZONAS_CUADRILLAS.sql
 
 --------TIPOS_INCIDENCIA_TECNICOS-------
-@DATOS/v2/TIPOS_INCIDENCIA_TECNICOS.sql
+\i DATOS/v2/TIPOS_INCIDENCIA_TECNICOS.sql
 
 
 ---------- INCIDENCIAS-------------------
-@DATOS/v2/INCIDENCIAS.SQL
+\i DATOS/v2/INCIDENCIAS.sql
 
 ------ORDENES DE ATENCION---------------
-@DATOS/v2/ORDENES_ATENCION.sql
+\i DATOS/v2/ORDENES_ATENCION.sql
 
 
 
